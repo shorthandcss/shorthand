@@ -1,0 +1,32 @@
+{
+  "name": "shorthandcss",
+  "version": "1.0.0",
+  "homepage": "https://shorthandcss.com",
+  "description": "Feature rich CSS framework for the new decade",
+  "main": "scss/shorthand.scss",
+  "scripts": {
+    "build-autoprefix": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"cover 99.5%\" -r dist/*.css",
+    "build-dist-lite": "node-sass --output-style expanded --source-map true scss/lite.scss dist/lite.shorthand.css && node-sass --source-map true --output-style compressed scss/lite.scss dist/lite.shorthand.min.css",
+    "build-dist": "node-sass --output-style expanded --source-map true scss/shorthand.scss dist/shorthand.css && node-sass --source-map true --output-style compressed scss/shorthand.scss dist/shorthand.min.css",
+    "build": "npm run build-dist && npm run build-dist-lite && npm run build-autoprefix"
+  },
+  "author": "bansal-io <hello@bansal.io>",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "scss",
+    "framework",
+    "ui",
+    "frontend"
+  ],
+  "bugs": {
+    "url": "https://github.com/shorthandcss/shorthand/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "banner-cli": "^0.14.1",
+    "node-sass": "^4.13.1",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^6.1.3"
+  }
+}

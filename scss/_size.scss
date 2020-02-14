@@ -1,0 +1,124 @@
+/**
+Sizing:
+    width
+    min-width
+    max-width
+    
+    height
+    min-height
+    max-height
+*/
+
+
+/**
+===========width===========
+*/
+@each $size,
+$value in $width-size {
+    .w-#{$size} {
+        width: $value !important;
+    }
+
+    .max-w-#{$size} {
+        max-width: $value !important;
+    }
+
+    .min-w-#{$size} {
+        min-width: $value !important;
+    }
+}
+
+/**
+responsive
+*/
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $size,
+        $value in $width-size {
+            .#{$breakpoint}-w-#{$size} {
+                width: $value !important;
+            }
+
+            .#{$breakpoint}-max-w-#{$size} {
+                max-width: $value !important;
+            }
+
+            .#{$breakpoint}-min-w-#{$size} {
+                min-width: $value !important;
+            }
+        }
+    }
+}
+
+/**
+===========Height===========
+*/
+
+@each $size,
+$value in $height-size {
+    .h-#{$size} {
+        height: $value !important;
+    }
+    .max-h-#{$size} {
+        max-height: $value !important;
+    }
+    .min-h-#{$size} {
+        min-height: $value !important;
+    }
+}
+
+/**
+responsive
+*/
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $size,
+        $value in $height-size {
+            .#{$breakpoint}-h-#{$size} {
+                height: $value !important;
+            }
+
+            .#{$breakpoint}-max-h-#{$size} {
+                max-height: $value !important;
+            }
+
+            .#{$breakpoint}-min-h-#{$size} {
+                min-height: $value !important;
+            }
+        }
+    }
+}
+
+/**
+responsive height
+*/
+$responsive-height: ('1by1': 100%,
+    '1by2': 50%,
+    '2by1': 200%,
+    '9by16': 56.25%,
+    '16by9': 177.77%,
+    '4by3': 133.33%,
+    '3by4': 75%) !default;
+
+@each $name,
+$value in $responsive-height {
+    .h-#{$name}:after {
+        content: "";
+        display: block;
+        padding-bottom: $value;
+    }
+}
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        @each $name,
+            $value in $responsive-height {
+                .#{$breakpoint}-h-#{$name}:after {
+                    content: "";
+                    display: block;
+                    padding-bottom: $value;
+                }
+            }
+    }
+}

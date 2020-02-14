@@ -1,0 +1,232 @@
+/**
+Direction
+*/
+$flex-directions : (row,
+    column,
+    row-reverse,
+    column-reverse);
+
+@each $direction in $flex-directions {
+    .flex-#{$direction} {
+        flex-direction: $direction !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        @each $direction in $flex-directions {
+            .#{$breakpoint}-flex-#{$direction} {
+                flex-direction: $direction !important;
+            }
+        }
+    }
+}
+
+/**
+Wrap
+*/
+$wrap-options : (wrap,
+    nowrap,
+    wrap-reverse);
+
+@each $key in $wrap-options {
+    .flex-#{$key} {
+        flex-wrap: $key !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        @each $key in $wrap-options {
+            .#{$breakpoint}-flex-#{$key} {
+                flex-wrap: $key !important;
+            }
+        }
+    }
+}
+
+/**
+Justify Content
+*/
+$justify-content-options : (start:flex-start,
+    end:flex-end,
+    center:center,
+    between:space-between,
+    around:space-around);
+
+
+@each $key,
+$value in $justify-content-options {
+    .justify-#{$key} {
+        justify-content: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $key,
+        $value in $justify-content-options {
+            .#{$breakpoint}-justify-#{$key} {
+                justify-content: $value !important;
+            }
+        }
+    }
+}
+
+/**
+Align Content
+*/
+$align-content-options : (start:flex-start,
+    end:flex-end,
+    center:center,
+    between:space-between,
+    around:space-around,
+    stretch:stretch);
+
+@each $key,
+$value in $align-content-options {
+    .content-#{$key} {
+        align-content: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $key,
+        $value in $align-content-options {
+            .#{$breakpoint}-content-#{$key} {
+                align-content: $value !important;
+            }
+        }
+    }
+}
+
+/**
+Align Items
+*/
+$align-items-options : (start:flex-start,
+    end:flex-end,
+    center:center,
+    stretch:stretch,
+    baseline:baseline);
+
+@each $key,
+$value in $align-items-options {
+    .items-#{$key} {
+        align-items: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $key,
+        $value in $align-items-options {
+            .#{$breakpoint}-items-#{$key} {
+                align-items: $value !important;
+            }
+        }
+    }
+}
+
+/**
+Align Self
+*/
+$align-self-options : (start:flex-start,
+    end:flex-end,
+    center:center,
+    stretch:stretch,
+    baseline:baseline,
+    auto:auto);
+
+@each $key,
+$value in $align-self-options {
+    .self-#{$key} {
+        align-self: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $key,
+        $value in $align-self-options {
+            .#{$breakpoint}-self-#{$key} {
+                align-self: $value !important;
+            }
+        }
+    }
+}
+
+/**
+Order
+*/
+$order-options : (first:-100,
+    last:100,
+    0:0,
+    1:1,
+    2:2,
+    3:3,
+    4:4,
+    5:5,
+    6:6,
+    7:7,
+    8:8,
+    9:9,
+    10:10,
+    11:11,
+    12:12);
+
+@each $key,
+$value in $order-options {
+    .order-#{$key} {
+        order: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $key,
+        $value in $order-options {
+            .#{$breakpoint}-order-#{$key} {
+                order: $value !important;
+            }
+        }
+    }
+}
+
+/**
+fill, equal, grow, and shrink
+*/
+.flex-fill, .flex-auto {
+    flex: 1 1 auto !important;
+}
+
+.flex-equal {
+    flex: 1 1 0% !important;
+}
+
+.flex-grow-0 {
+    flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1 !important;
+}
+.flex-none{
+    flex: 0 0 auto;
+}
+.flex-initial{
+    flex: 0 1 auto;
+}

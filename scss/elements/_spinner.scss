@@ -1,0 +1,12 @@
+.spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border-width: .1rem;
+    border-style: solid;
+    border-color: currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotation .8s linear infinite;
+}

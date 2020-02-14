@@ -1,0 +1,124 @@
+/**
+    padding
+*/
+@each $size,
+$value in $paddings {
+
+    .p-#{$size} {
+        padding: $value !important;
+    }
+
+    @each $side-key,
+    $side-value in $sides {
+        .p#{$side-key}-#{$size} {
+            padding-#{$side-value}: $value !important;
+        }
+    }
+
+    .px-#{$size} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+
+    .py-#{$size} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $size,
+        $value in $paddings {
+
+            .#{$breakpoint}-p-#{$size} {
+                padding: $value !important;
+            }
+
+            @each $side-key,
+            $side-value in $sides {
+                .#{$breakpoint}-p#{$side-key}-#{$size} {
+                    padding-#{$side-value}: $value !important;
+                }
+            }
+
+            .#{$breakpoint}-px-#{$size} {
+                padding-left: $value !important;
+                padding-right: $value !important;
+            }
+
+            .#{$breakpoint}-py-#{$size} {
+                padding-top: $value !important;
+                padding-bottom: $value !important;
+            }
+        }
+    }
+}
+
+/**
+    margin
+*/
+@each $size,
+$value in $margins {
+
+    .m-#{$size},
+    .after-m-#{$size}::after,
+    .before-m-#{$size}::before {
+        margin: $value !important;
+    }
+
+    .mx-#{$size},
+    .after-mx-#{$size}::after,
+    .before-mx-#{$size}::before {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+
+    .my-#{$size},
+    .after-my-#{$size}::after,
+    .before-my-#{$size}::before {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+
+    @each $side-key,
+    $side-value in $sides {
+        .m#{$side-key}-#{$size},
+        .after-m#{$side-key}-#{$size}::after,
+        .before-m#{$side-key}-#{$size}::before {
+            margin-#{$side-value}: $value !important;
+        }
+    }
+
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $size,
+        $value in $margins {
+
+            .#{$breakpoint}-m-#{$size} {
+                margin: $value !important;
+            }
+
+            @each $side-key,
+            $side-value in $sides {
+                .#{$breakpoint}-m#{$side-key}-#{$size} {
+                    margin-#{$side-value}: $value !important;
+                }
+            }
+
+            .#{$breakpoint}-mx-#{$size} {
+                margin-left: $value !important;
+                margin-right: $value !important;
+            }
+
+            .#{$breakpoint}-my-#{$size} {
+                margin-top: $value !important;
+                margin-bottom: $value !important;
+            }
+        }
+    }
+}

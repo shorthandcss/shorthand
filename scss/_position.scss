@@ -1,0 +1,176 @@
+/**
+position
+*/
+$positions: (
+    absolute,
+    fixed,    
+    relative,
+    static,
+    sticky);
+
+@each $position in $positions {
+    .#{$position} {
+        position: $position !important;
+    }
+}
+@each $breakpoint in map-keys($breakpoints){
+    @include breakpoint-up($breakpoint) {
+        @each $position in $positions {
+            .#{$breakpoint}-#{$position} {
+                position: $position !important;
+            }
+        }
+    }
+}
+/**
+Locations: top, right, bottom, left
+*/
+$locations: (0: 0,
+        50pc: 50%,
+        auto: auto);
+
+
+/**
+.top-0 { top: 0 }
+*/
+@each $location-key, $location-value in $locations {
+    @each $side-key, $side-value in $sides {
+        .#{$side-value}-#{$location-key} {
+            #{$side-value}: $location-value;
+        }
+    }
+}
+
+/**
+display
+*/
+$display-options: (block:block,
+    inline-block:inline-block,
+    inline:inline,
+    flex:flex,
+    inline-flex:inline-flex,
+    table:table,
+    table-row:table-row,
+    table-cell:table-cell,
+    hidden:none);
+
+@each $display-key, $display-value in $display-options {
+    .#{$display-key} {
+        display: $display-value !important;
+    }
+}
+@each $breakpoint in map-keys($breakpoints){
+    @include breakpoint-up($breakpoint) {
+        @each $display-key, $display-value in $display-options {
+            .#{$breakpoint}-#{$display-key} {
+                display: $display-value !important;
+            }
+        }
+    }
+}
+
+/**
+z-index
+*/
+
+@each $index in $z-index {
+    .z-#{$index} {
+        z-index: $index;
+    }
+}
+
+/**
+float
+*/
+$float-options: (left,
+    right,
+    none);
+
+@each $float-option in $float-options {
+    .float-#{$float-option} {
+        float: $float-option;
+    }
+}
+/**
+vertical-align
+*/
+$vertical-options:(
+    baseline, top, middle, bottom
+) !default;
+@each $name in $vertical-options {
+    .align-#{$name} {
+        vertical-align: $name;
+    }
+}
+
+/**
+clear
+*/
+.clearfix, .clear-both {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+overflow
+*/
+$overflow-options: (auto,
+    hidden,
+    visible,
+    scroll);
+
+@each $overflow-option in $overflow-options {
+    .overflow-#{$overflow-option} {
+        overflow: $overflow-option !important;
+    }
+    .overflow-x-#{$overflow-option} {
+        overflow-x: $overflow-option !important;
+    }
+    .overflow-y-#{$overflow-option} {
+        overflow-y: $overflow-option !important;
+    }
+}
+
+/**
+absolute
+*/
+.absolute-full{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .absolute-left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .absolute-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .absolute-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .absolute-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .absolute-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }

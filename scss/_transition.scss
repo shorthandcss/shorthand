@@ -1,0 +1,42 @@
+$duration-options: (100: 100ms,
+    200: 200ms,
+    300: 300ms,
+    400: 400ms,
+    500: 500ms,
+    600: 600ms,
+    700: 700ms,
+    800: 800ms,
+    900: 900ms,
+) !default;
+
+$animation-options: (ease: ease,
+    linear: linear,
+    ease-in:ease-in,
+    ease-out:ease-out,
+) !default;
+
+@each $animation-name,
+$animation-value in $animation-options {
+
+    @each $duration-name,
+    $duration-value in $duration-options {
+        .#{$animation-name}-#{$duration-name} {
+            transition: all $duration-value $animation-value;
+        }
+    }
+}
+
+@each $duration-name,
+$duration-value in $duration-options {
+    .transition-#{$duration-name} {
+        transition-duration: $duration-value;
+    }
+}
+
+$property-options: (width, height, padding, margin, color, background-color, background, all) !default;
+
+@each $name in $property-options {
+    .transition-#{$name} {
+        transition-property: $name !important;
+    }
+}

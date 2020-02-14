@@ -1,0 +1,119 @@
+/**
+cursor
+*/
+
+@each $key,
+$value in $cursor {
+  .cursor-#{$key} {
+    cursor: $value;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// placeholder
+
+@each $name,
+$value in $all-colors {
+  .ph-#{$name}::placeholder,
+  .focus-ph-#{$name}:focus::placeholder {
+    color: $value !important;
+  }
+}
+
+/**
+ outline
+ */
+.outline-none,
+.focus-outline-none:focus {
+  outline: 0;
+}
+
+/**
+currentColor
+*/
+
+.fill-current {
+  fill: currentColor !important;
+}
+
+.stroke-current {
+  stroke: currentColor !important;
+}
+
+.bg-current {
+  background-color: currentColor !important;
+}
+
+.color-current {
+  color: currentColor !important;
+}
+
+.border-current {
+  border-color: currentColor !important;
+}
+
+
+/**
+user-select
+*/
+$user-select-options:(none, text, all, auto);
+
+@each $name in $user-select-options {
+  .select-#{$name} {
+    user-select: $name;
+  }
+}
+
+/**
+resize
+*/
+$resize-options:(none, both, horizontal, vertical, initial, inherit);
+
+@each $name in $resize-options {
+  .resize-#{$name} {
+    resize: $name;
+  }
+}
+
+/**
+scroll-behavior
+*/
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/**
+object-fit
+*/
+
+$object-options:(fill, contain, cover, scale-down, none);
+
+@each $name in $object-options {
+  .object-#{$name} {
+    object-fit: $name;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    @each $name in $object-options {
+      .#{$breakpoint}-object-#{$name} {
+        object-fit: $name;
+      }
+    }
+  }
+}
+
+/**
+box-sizing
+*/
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}

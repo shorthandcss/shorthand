@@ -1,0 +1,95 @@
+/**
+scale
+*/
+
+@each $size, $value in $scale-options {
+    .scale-#{$size}, .hover-scale-#{$size}:hover, .after-scale-#{$size}::after, .before-scale-#{$size}::before {
+        transform: scale($value);
+    }
+}
+@each $breakpoint in map-keys($breakpoints){
+    @include breakpoint-up($breakpoint) {
+        @each $size, $value in $scale-options {
+            .#{$breakpoint}-scale-#{$size}, .#{$breakpoint}-hover-scale-#{$size}:hover {
+                transform: scale($value);
+            }
+        }
+    }
+}
+
+/**
+Translate, Shift center
+*/
+.shift-tr, .shift-rt{
+    transform: translateY(-50%) translateX(50%);
+}
+.shift-tl, .shift-lt{
+    transform: translateY(-50%) translateX(-50%);
+}
+.shift-bl, .shift-lb{
+    transform: translateY(50%) translateX(-50%);
+}
+.shift-br, .shift-rb{
+    transform: translateY(50%) translateX(50%);
+}
+.shift-l{
+    transform: translateX(-50%);
+}
+.shift-r{
+    transform: translateX(50%);
+}
+.shift-t{
+    transform: translateY(-50%);
+}
+.shift-b{
+    transform: translateY(50%);
+}
+
+$shift-options : (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    6: 6px,
+    8: 8px,
+    12: 12px,
+    16: 16px,
+) !default;
+
+@each $size, $value in $shift-options {
+    .shift-l-#{$size}, .hover-shift-l-#{$size}:hover {
+        transform: translateX(-$value);
+    }
+    .shift-r-#{$size}, .hover-shift-r-#{$size}:hover{
+        transform: translateX($value);
+    }
+    .shift-t-#{$size}, .hover-shift-t-#{$size}:hover{
+        transform: translateY(-$value);
+    }
+    .shift-b-#{$size}, .hover-shift-b-#{$size}:hover{
+        transform: translateY($value);
+    }
+}
+
+/**
+Rotate
+*/
+
+$rotate-options : (
+    0: 0deg,
+    1: 1deg,
+    2: 2deg,
+    5: 5deg,
+    10: 10deg,
+    20: 20deg,
+    45: 45deg,
+    90: 90deg,
+    180: 180deg,
+    270: 270deg,
+) !default;
+
+@each $angle, $value in $rotate-options {
+    .rotate-#{$angle}, .hover-rotate-#{$angle}:hover {
+        transform: rotate($value);
+    }
+}

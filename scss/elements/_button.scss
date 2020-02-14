@@ -1,0 +1,162 @@
+// Button
+
+.button,
+.button-xs,
+.button-md,
+.button-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  color: $button-font-color;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: $button-background-color;
+  border: 1px solid $button-border-color;
+  border-radius: $button-border-radius;
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    cursor: not-allowed !important;
+    opacity: 0.3 !important;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.15em rgba($button-focus-color, 0.5);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &[class*=' hover']:hover {
+    opacity: 1;
+  }
+
+  .input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.loading {
+    pointer-events: none;
+    cursor: wait !important;
+    opacity: 0.8;
+  }
+
+  &.loading::after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-bottom;
+    border-width: .1rem;
+    border-style: solid;
+    border-color: currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotation .5s linear infinite;
+    margin-left: 0.5rem;
+    margin-right: -1rem;
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.half {
+    width: 50%;
+  }
+}
+
+.button {
+  height: calc(1.5rem + .75rem + 2px);
+  padding: .375rem calc(.75rem + 1rem);
+  font-size: $button-font-size;
+
+  &.loading::after {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.button-xs {
+  height: calc(1.5rem + .4rem + 2px);
+  padding: .2rem calc(.5rem + 1rem);
+  font-size: $button-font-size * 0.8;
+
+  &.loading::after {
+    width: 1.2rem * 0.8;
+    height: 1.2rem * 0.8;
+  }
+}
+
+.button-md {
+  height: calc(1.5rem + 1rem + 2px);
+  padding: .5rem calc(1rem + 1.2rem);
+  font-size: $button-font-size * 1.25;
+
+  &.loading::after {
+    width: 1.2rem * 1.25;
+    height: 1.2rem * 1.25;
+  }
+}
+
+.button-lg {
+  height: calc(1.8rem + 1.25rem + 2px);
+  padding: .625rem calc(1.25rem + 1.5rem);
+  font-size: $button-font-size * 1.5;
+
+  &.loading::after {
+    width: 1.2rem * 1.5;
+    height: 1.2rem * 1.5;
+  }
+}
+
+.button-group {
+  display: inline-flex;
+
+  &>:not(:first-child):not(:last-child) {
+    border-radius: 0px;
+  }
+
+  &>:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &>:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  &>:not(:last-child) {
+    margin-right: -1px;
+  }
+}
+
+.button-group-vertical {
+  display: inline-flex;
+  flex-direction: column;
+
+  &>:not(:first-child):not(:last-child) {
+    border-radius: 0px;
+  }
+
+  &>:first-child {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &>:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  &>:not(:last-child) {
+    margin-bottom: -1px;
+  }
+}

@@ -1,0 +1,20 @@
+// Class
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+// opacity  
+@each $name,
+$value in $opacity {
+  .opacity-#{$name} {
+    opacity: $value;
+  }
+
+  .hover-opacity-#{$name}:hover {
+    opacity: $value;
+  }
+}

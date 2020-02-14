@@ -1,0 +1,84 @@
+/**
+:after, :before
+
+1. Icons
+2. Float
+3. Margins
+*/
+
+/**
+Icons
+shorthand: .after-{icon}
+*/
+$unicode-icons: ('plus':'\002B',
+    'minus':'\2212',
+    'times':'\00D7',
+    'times-large':'\2573',
+    'circle-plus':'\2295',
+    'circle-minus':'\2296',
+    'circle-times':'\2297',
+    'hash':'\0023',
+    'ellipsis':'\2026',
+    'ellipsis-midline':'\22EF',
+    'ellipsis-vertical':'\22EE',
+    'arrow-left':'\2190',
+    'arrow-right':'\2192',
+    'arrow-up':'\2191',
+    'arrow-down':'\2193',
+    'triangle-left':'\25C0',
+    'triangle-right':'\25B6',
+    'triangle-up':'\25B2',
+    'triangle-down':'\25BC',
+    'asterisk':'\2217',
+    'menu':'\2630',
+) !default;
+
+@each $name,
+$value in $unicode-icons {
+
+    .after-#{$name}::after,
+    .before-#{$name}::before {
+        content: $value;
+        font-size: inherit;
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        @each $name,
+        $value in $unicode-icons {
+
+            .after-#{$name}::after,
+            .before-#{$name}::before {
+                content: $value;
+            }
+        }
+    }
+}
+
+/** Float */
+.after-left:after,
+.before-left::before {
+    float: left;
+}
+
+.after-right:after,
+.before-right::before {
+    float: right;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+
+        .after-left:after,
+        .before-left::before {
+            float: left;
+        }
+
+        .after-right:after,
+        .before-right::before {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,276 @@
+$breakpoints: (sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px) !default;
+
+$sides : (t:top,
+  r:right,
+  b:bottom,
+  l: left) !default;
+
+$border-radius: (none: 0px,
+  0: 0px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  6: 6px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+  round: 9999rem) !default;
+
+$border-width: (0: 0px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  6: 6px,
+  8: 8px,
+  12: 12px,
+  16: 16px,
+) !default;
+
+$alpha-options : (
+  10: 0.9,
+  20: 0.8,
+  30: 0.7,
+  40: 0.6,
+  50: 0.5,
+  60: 0.4,
+  70: 0.3,
+  80: 0.2,
+  90: 0.1,
+) !default;
+
+$paddings: (0: 0,
+  1: 1 * 0.25rem,
+  2: 2 * 0.25rem,
+  3: 3 * 0.25rem,
+  4: 4 * 0.25rem,
+  5: 5 * 0.25rem,
+  6: 6 * 0.25rem,
+  7: 7 * 0.25rem,
+  8: 8 * 0.25rem,
+  9: 9 * 0.25rem,
+  10: 10 * 0.25rem,
+  l1: 1rem,
+  l2: 2rem,
+  l3: 3rem,
+  l4: 4rem,
+  l5: 5rem,
+  l6: 6rem,
+  l7: 7rem,
+  l8: 8rem,
+  l9: 9rem,
+  l10: 10rem,
+  1px:1px) !default;
+
+$margins: map-merge((auto:auto, -100pc:-100%), $paddings);
+
+$width-size: (0: 0,
+  1: 1 * 0.25rem,
+  2: 2 * 0.25rem,
+  3: 3 * 0.25rem,
+  4: 4 * 0.25rem,
+  5: 5 * 0.25rem,
+  6: 6 * 0.25rem,
+  7: 7 * 0.25rem,
+  8: 8 * 0.25rem,
+  9: 9 * 0.25rem,
+  10: 10 * 0.25rem,
+  l1: 1rem,
+  l2: 2rem,
+  l3: 3rem,
+  l4: 4rem,
+  l5: 5rem,
+  l6: 6rem,
+  l7: 7rem,
+  l8: 8rem,
+  l9: 9rem,
+  l10: 10rem,
+  auto: auto,
+  1px: 1px,
+  10pc: 10%,
+  20pc: 20%,
+  25pc: 25%,
+  30pc: 30%,
+  33pc: 33.3333%,
+  40pc: 40%,
+  50pc: 50%,
+  60pc: 60%,
+  66pc: 66.6666%,
+  70pc: 70%,
+  75pc: 75%,
+  80pc: 80%,
+  90pc: 90%,
+  100pc: 100%,
+  25vw: 25vw,
+  50vw: 50vw,
+  75vw: 75vw,
+  100vw: 100vw) !default;
+
+$height-size: (0: 0,
+  1: 1 * 0.25rem,
+  2: 2 * 0.25rem,
+  3: 3 * 0.25rem,
+  4: 4 * 0.25rem,
+  5: 5 * 0.25rem,
+  6: 6 * 0.25rem,
+  7: 7 * 0.25rem,
+  8: 8 * 0.25rem,
+  9: 9 * 0.25rem,
+  10: 10 * 0.25rem,
+  l1: 1rem,
+  l2: 2rem,
+  l3: 3rem,
+  l4: 4rem,
+  l5: 5rem,
+  l6: 6rem,
+  l7: 7rem,
+  l8: 8rem,
+  l9: 9rem,
+  l10: 10rem,
+  auto: auto,
+  1px: 1px,
+  25pc: 25%,
+  33pc: 33.3333%,
+  50pc: 50%,
+  66pc: 66.6666%,
+  75pc: 75%,
+  100pc: 100%,
+  25vh: 25vh,
+  50vh: 50vh,
+  75vh: 75vh,
+  100vh: 100vh) !default;
+
+$font-size: (s5: .5rem,
+  s4: .6rem,
+  s3: .7rem,
+  s2: .8rem,
+  s1: .9rem,
+  m1: 1.125rem,
+  m2: 1.25rem,
+  m3: 1.5rem,
+  m4: 1.75rem,
+  m5: 2rem,
+  l1: 2.25rem,
+  l2: 2.5rem,
+  l3: 3rem,
+  l4: 3.5rem,
+  l5: 4rem,
+  xl1: 5rem,
+  xl2: 6rem,
+  xl3: 7rem,
+  xl4: 8rem,
+  xl5: 9rem,
+) !default;
+
+$font-weight: (100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900,
+  bold: bold) !default;
+
+$line-height: (1: 1,
+  2: 1.25,
+  3: 1.5,
+  4: 1.75,
+  5: 2,
+  6: 2.25,
+  7: 2.5,
+) !default;
+
+// Letter Spacing. class: .ls
+$letter-spacing-options: (tightest: -1px,
+  tighter: -0.75px,
+  tight: -0.5px,
+  none: 0,
+  wide: 0.5px,
+  wider: 0.75px,
+  widest: 1px,
+) !default;
+
+$word-spacing-options: (tightest: -2px,
+  tighter: -0.1px,
+  tight: -0.5px,
+  none: 0,
+  wide: 1px,
+  wider: 5px,
+  widest: 10px,
+) !default;
+
+$scale-options: (down-4: 0.125,
+  down-3: 0.25,
+  down-2: 0.50,
+  down-1: 0.75,
+  none: 1,
+  up-1: 1.125,
+  up-2: 1.25,
+  up-3: 1.5,
+  up-4: 1.75
+) !default;
+
+$opacity: (0: 0,
+  10: 0.1,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  100: 1,
+) !default;
+
+$cursor: (auto:auto,
+  crosshair:crosshair,
+  default:default,
+  help:help,
+  move: move,
+  none:none,
+  not-allowed:not-allowed,
+  pointer: pointer,
+  progress:progress,
+  text:text,
+  wait: wait,
+  zoom-in:zoom-in,
+  zoom-out:zoom-out) !default;
+
+$z-index: (-1, 0, 10, 20, 30, 40, 50, 100, 1000, 2000, 5000, 10000, auto) !default;
+
+$default-font-family : $font-sans !default;
+$default-font-size : 16px !default;
+$body-color: map-get($all-colors, 'gray-light') !default;
+$body-bg-color: map-get($all-colors, 'white') !default;
+
+$default-border-color: map-get($all-colors, 'gray-lighter') !default;
+
+//table style default values
+$table-border-color: map-get($all-colors, 'gray-lighter') !default;
+$table-head-background: map-get($all-colors, 'gray-lightest') !default;
+$table-background-color: map-get($all-colors, 'white') !default;
+$table-background-accent: map-get($all-colors, 'gray-lightest') !default;
+$table-cell-padding: 0.8rem !default;
+
+// input style default values
+$input-border-color: map-get($all-colors, 'gray-light') !default;
+$input-font-color: map-get($all-colors, 'gray') !default;
+$input-ph-color: map-get($all-colors, 'gray-light') !default;
+$input-font-size: 0.8rem !default;
+$input-border-radius: 4px !default;
+// button style default values
+$button-background-color: map-get($all-colors, 'gray-dark') !default;
+$button-border-color: map-get($all-colors, 'transparent') !default;
+$button-focus-color: map-get($all-colors, 'gray') !default;
+$button-font-color: map-get($all-colors, 'white') !default;
+$button-font-size: 0.8rem !default;
+$button-border-radius: 4px !default;
+// link style default values
+$default-link-color: map-get($all-colors, 'gray-darker') !default;

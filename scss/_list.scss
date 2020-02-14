@@ -1,0 +1,10 @@
+/**
+List Style
+*/
+$list-style-options: (none, disc, decimal);
+
+@each $key in $list-style-options {
+    .list-#{$key} {
+        list-style-type: $key;
+    }
+}

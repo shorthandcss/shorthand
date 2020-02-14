@@ -1,0 +1,54 @@
+@mixin breakpoint-up($name) {
+  $min: map-get($breakpoints, $name);
+
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin border-radius($class, $size, $value) {
+  .#{$class}-#{$size} {
+    border-radius: $value !important;
+  }
+
+  .#{$class}-t-#{$size} {
+    border-top-left-radius: $value !important;
+    border-top-right-radius: $value !important;
+  }
+
+  .#{$class}-r-#{$size} {
+    border-top-right-radius: $value !important;
+    border-bottom-right-radius: $value !important;
+  }
+
+  .#{$class}-b-#{$size} {
+    border-bottom-left-radius: $value !important;
+    border-bottom-right-radius: $value !important;
+  }
+
+  .#{$class}-l-#{$size} {
+    border-top-left-radius: $value !important;
+    border-bottom-left-radius: $value !important;
+  }
+}
+
+
+@mixin gradient($direction, $color1, $color2) {
+
+  background-image: linear-gradient($direction, $color1 0%, $color2 100%);
+  background-image: -webkit-linear-gradient($direction, $color1 0%, $color2 100%);
+  background-image: -moz-linear-gradient($direction, $color1 0%, $color2 100%);
+  background-image: -o-linear-gradient($direction, $color1 0%, $color2 100%);
+}
+
+@mixin input($input-font-color, $input-border-color, $input-border-radius) {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $input-font-color;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  vertical-align: middle;
+}

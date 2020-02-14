@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: black;
+    background-color: white;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 4
+  }
+a{
+  color: $default-link-color;
+}
+table{
+  border-collapse: collapse;
+}
+textarea {
+  overflow: auto;
+}
+
+button{
+  cursor: pointer;
+}
+img,
+video{
+  height: auto;
+  max-width: 100%;
+  border-style: none;
+}

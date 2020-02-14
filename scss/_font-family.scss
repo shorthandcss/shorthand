@@ -1,0 +1,50 @@
+/**
+font family
+*/
+$font-sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+$font-serif: 'Georgia, Cambria, "Times New Roman", Times, serif';
+$font-mono: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
+
+$system-fonts: (sans: $font-sans,
+    serif: $font-serif,
+    mono: $font-mono) !default;
+
+$google-fonts: (lato: "'Lato', sans-serif",
+    lora: "'Lora', serif",
+    montserrat: "'Montserrat', sans-serif",
+    muli: "'Muli', sans-serif",
+    noto-sans: "'Noto Sans', sans-serif",
+    open-sans: "'Open Sans', sans-serif",
+    pt-serif: "'PT Serif', serif",
+    playfair-display: "'Playfair Display', serif",
+    poppins: "'Poppins', sans-serif",
+    roboto: "'Roboto', sans-serif",
+    space-mono: "'Space Mono', monospace",
+    dosis: "'Dosis', sans-serif",
+    fira-sans: "'Fira Sans', sans-serif",
+    cabin: "'Cabin', sans-serif",
+    raleway: "'Raleway', sans-serif",
+    pt-sans: "'PT Sans', sans-serif",
+    titillium-web: "'Titillium Web', sans-serif",
+    bitter: "'Bitter', serif",
+    lobster: "'Lobster', cursive",
+    barlow: "'Barlow', sans-serif",
+    abel: "'Abel', sans-serif",
+    asap: "'Asap', sans-serif",
+    archivo-narrow: "'Archivo Narrow', sans-serif",
+    barlow-condensed: "'Barlow Condensed', sans-serif",
+    bree-serif: "'Bree Serif', serif",
+    crete-round: "'Crete Round', serif",
+    lobster-two: "'Lobster Two', cursive",
+    pacifico: "'Pacifico', cursive",
+    caveat: "'Caveat', cursive",
+    satisfy: "'Satisfy', cursive",
+    cookie: "'Cookie', cursive",
+    handlee: "'Handlee', cursive",
+    yellowtail: "'Yellowtail', cursive",
+    dancing-script: "'Dancing Script', cursive",
+    great-vibes: "'Great Vibes', cursive",
+    fira-code: "'Fira Code', monospace",
+) !default;
+
+$all-fonts: map-merge($system-fonts, $google-fonts);

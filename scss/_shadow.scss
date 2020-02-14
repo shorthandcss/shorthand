@@ -1,0 +1,59 @@
+/**
+Shadow
+*/
+
+.shadow-0, .hover-shadow-0:hover {
+    box-shadow: none;
+}
+
+.shadow, .hover-shadow:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-1, .hover-shadow-1:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-2, .hover-shadow-2:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-3, .hover-shadow-3:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-4, .hover-shadow-4:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@each $color in $shadow-colors {
+    @if color($color) {
+        .shadow-#{$color}, .hover-shadow-#{$color}:hover {
+            box-shadow: 0 2px 3px 0 adjust-color(color($color), $alpha: -0.50 );
+        }
+        .shadow-1-#{$color}, .hover-shadow-1-#{$color}:hover {
+            box-shadow: 0 4px 6px -1px adjust-color(color($color), $alpha: -0.50 );
+        }
+        .shadow-2-#{$color}, .hover-shadow-2-#{$color}:hover {
+            box-shadow: 0 10px 15px -3px adjust-color(color($color), $alpha: -0.50 );
+        }
+        .shadow-3-#{$color}, .hover-shadow-3-#{$color}:hover {
+            box-shadow: 0 20px 25px -5px adjust-color(color($color), $alpha: -0.60 );
+        }
+        .shadow-4-#{$color}, .hover-shadow-4-#{$color}:hover {
+            box-shadow: 0 25px 40px -8px adjust-color(color($color), $alpha: -0.75 );
+        }
+    }
+  }
+
+@each $name,
+$value in $all-colors {
+    .focus-#{$name}:focus{
+        border-color: $value !important;
+        box-shadow: 0 0 0 0.125em rgba($value, 0.25) !important;
+    }
+}
+.focus-none:focus{
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+}

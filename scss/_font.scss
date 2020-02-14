@@ -1,0 +1,243 @@
+/* 
+Typography:
+  color
+  font-family
+  font-size 
+  font-weight
+  line-height 
+  letter-spacing
+  text-align
+  text-transform
+  font-style
+  word-spacing
+*/
+
+/**
+text color, font color
+*/
+
+@each $name,
+$value in $all-colors {
+
+  .#{$name},
+  .hover-#{$name}:hover {
+    color: $value !important;
+  }
+}
+
+/**
+font-family
+*/
+
+@each $name,
+$value in $all-fonts {
+  .#{$name} {
+    font-family: #{$value} !important;
+  }
+}
+
+/**
+font-size
+*/
+
+@each $size,
+$value in $font-size {
+  .fs-#{$size} {
+    font-size: $value !important;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+
+    @each $size,
+    $value in $font-size {
+      .#{$breakpoint}-fs-#{$size} {
+        font-size: $value !important;
+      }
+    }
+  }
+}
+
+/**
+font-weight
+*/
+
+@each $size,
+$value in $font-weight {
+
+  .fw-#{$size} {
+    font-weight: $value !important;
+  }
+}
+
+
+/**
+line-height
+*/
+
+@each $size,
+$value in $line-height {
+
+  .lh-#{$size} {
+    line-height: $value !important;
+  }
+}
+
+/**
+  letter spacing
+*/
+
+@each $name,
+$value in $letter-spacing-options {
+
+  .ls-#{$name},
+  .hover-ls-#{$name}:hover {
+    letter-spacing: $value;
+  }
+}
+
+/**
+  text align
+  */
+$align-options: (left: left,
+  right: right,
+  center: center,
+  justify: justify,
+);
+
+@each $name,
+$value in $align-options {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}
+
+/**
+  text decoration
+  */
+$text-decoration-options: (underline: underline,
+  line-through: line-through,
+  no-underline: none,
+);
+
+@each $name,
+$value in $text-decoration-options {
+
+  .#{$name},
+  .hover-#{$name}:hover {
+    text-decoration: $value !important;
+  }
+}
+
+/**
+underline-style
+*/
+$underline-style-options: (solid, double, dotted, dashed, wavy);
+
+@each $name in $underline-style-options {
+
+  .underline-#{$name},
+  .hover-underline-#{$name}:hover {
+    text-decoration: underline !important;
+    text-decoration-style: $name !important;
+  }
+}
+
+/**
+underline-color
+*/
+@each $name,
+$value in $all-colors {
+  .underline-#{$name} {
+    text-decoration: underline;
+    text-decoration-color: $value;
+  }
+}
+/**
+  Text Transform
+  */
+$text-transform-options: (uppercase,
+  lowercase,
+  capitalize,
+);
+
+@each $name in $text-transform-options {
+  .#{$name} {
+    text-transform: $name;
+  }
+}
+
+/**
+white-space
+*/
+$whitespace-options:(normal, nowrap, pre, pre-line, pre-wrap, inherit);
+
+@each $name in $whitespace-options {
+  .ws-#{$name} {
+    white-space: $name;
+  }
+}
+
+/**
+font-style
+*/
+.italic {
+  font-style: italic;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+/**
+  word spacing
+*/
+
+@each $name,
+$value in $word-spacing-options {
+
+  .ws-#{$name},
+  .hover-ws-#{$name}:hover {
+    word-spacing: $value;
+  }
+}
+
+/**
+word-break
+*/
+$word-break-options: (break-normal: normal,
+  break-all: break-all,
+  keep-all:keep-all,
+  break:break-word);
+
+@each $name,
+$value in $word-break-options {
+  .word-#{$name} {
+    word-break: $value;
+  }
+}
+
+/**
+word-wrap
+*/
+.word-wrap-break {
+  word-wrap: break-word;
+}
+
+.word-wrap-normal {
+  word-wrap: normal;
+}
+
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,143 @@
+/**
+background color
+*/
+@each $name,
+$value in $all-colors {
+
+  .bg-#{$name},
+  .hover-bg-#{$name}:hover {
+    background-color: $value !important;
+  }
+}
+
+/**
+background color alpha
+*/
+$alpha-options : (10: 0.9,
+  20: 0.8,
+  30: 0.7,
+  40: 0.6,
+  50: 0.5,
+  60: 0.4,
+  70: 0.3,
+  80: 0.2,
+  90: 0.1,
+);
+
+@each $alpha-key,
+$alpha-value in $alpha-options {
+
+  @each $name,
+  $value in $all-colors {
+    @if $name !='transparent' {
+
+      .bg-#{$name}-#{$alpha-key},
+      .hover-bg-#{$name}-#{$alpha-key}:hover {
+        background-color: adjust-color($value, $alpha: -$alpha-value) !important;
+      }
+    }
+  }
+}
+
+/**
+background attachment
+*/
+$attachment-options: (fixed, local, scroll);
+
+@each $name in $attachment-options {
+  .bg-#{$name} {
+    background-attachment: $name !important;
+  }
+}
+
+/**
+background position
+*/
+$background-positions: (t: top,
+  r: right,
+  b: bottom,
+  l:left,
+  lt: left top,
+  lb: left bottom,
+  rt: right top,
+  rb: right bottom,
+  c: center);
+
+@each $name,
+$value in $background-positions {
+  .bg-#{$name} {
+    background-position: $value !important;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+
+    @each $name,
+    $value in $background-positions {
+      .#{$breakpoint}-bg-#{$name} {
+        background-position: $value !important;
+      }
+    }
+  }
+}
+
+/**
+  background repeat
+  */
+$repeat-options: (repeat, no-repeat, repeat-x, repeat-y);
+
+@each $name in $repeat-options {
+  .bg-#{$name} {
+    background-repeat: $name !important;
+  }
+}
+
+/**
+  background size
+  */
+$background-size-options: (auto, cover, contain);
+
+@each $name in $background-size-options {
+  .bg-#{$name} {
+    background-size: $name !important;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    @each $name in $background-size-options {
+      .#{$breakpoint}-bg-#{$name} {
+        background-size: $name !important;
+      }
+    }
+  }
+}
+
+/**
+ Gradient Background ( single color)
+*/
+@each $name in $gradient-colors {
+  @if color($name + '-light') {
+    @if color($name + '-dark') {
+      .linear-#{$name} {
+        background-image: linear-gradient(to right, color($name + '-light') 0%, color($name + '-dark') 100%) !important;
+      }
+    }
+  }
+}
+
+// 2 color gradient
+@each $color-left in $gradient-colors {
+  @each $color-right in $gradient-colors {
+    @if color($color-left) {
+      @if color($color-right) {
+        @if $color-left !=$color-right {
+          .#{$color-left}-#{$color-right} {
+            @include gradient(to right, color($color-left), color($color-right));
+          }
+        }
+      }
+    }
+  }
+}

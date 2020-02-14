@@ -1,0 +1,22 @@
+/**
+filter
+backdrop-filter
+*/
+
+@for $i from 0 through 10 {
+
+    .backdrop-blur-#{$i},
+    .hover-backdrop-blur-#{$i}:hover {
+        backdrop-filter: blur(#{$i}px);
+    }
+
+    .blur-#{$i},
+    .hover-blur-#{$i}:hover {
+        filter: blur(#{$i}px);
+    }
+
+    .grayscale-#{$i},
+    .hover-grayscale-#{$i}:hover {
+        filter: grayscale($i*0.1);
+    }
+}

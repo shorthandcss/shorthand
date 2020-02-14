@@ -1,0 +1,11 @@
+$cool-colors: ( // gray colors
+    'gray-darkest': #36454F,
+    'gray-darker':#465966,
+    'gray-dark': #566E7E,
+    'gray': #668295,
+    'gray-light': #B7C4CD,
+    'gray-lighter': #E4E8EB,
+    'gray-lightest': #EEF1F5,
+) !default;
+
+@import 'shorthand.scss';

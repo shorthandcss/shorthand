@@ -1,0 +1,207 @@
+/**
+Forms:
+    input
+    textarea
+    select
+    label
+*/
+
+/**
+shorthand class:
+    .input
+    .input.disabled
+    .input.full|half
+    .input-xs|md|lg
+    .input-wrapper
+    .input-icon
+*/
+.input,
+.input-xs,
+.input-md,
+.input-lg,
+.select,
+.select-xs,
+.select-md,
+.select-lg {
+    @include input($input-font-color, $input-border-color, $input-border-radius);
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: rgba($input-border-color, 0.2);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.125em rgba($input-border-color, 0.5);
+    }
+
+    &:hover {
+        border-color: darken($input-border-color, 30%);
+    }
+
+    &::placeholder {
+        color: $input-ph-color;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.half {
+        width: 50%;
+    }
+}
+
+.input,
+.select {
+    height: calc(1.5rem + .75rem + 2px);
+    padding: .375rem calc(.75rem + .5rem);
+    font-size: $input-font-size;
+}
+
+.input-xs,
+.select-xs {
+    height: calc(1.5rem + .4rem + 2px);
+    padding: .2rem calc(.5rem + .5rem);
+    font-size: $input-font-size * 0.8;
+}
+
+.input-md,
+.select-md {
+    height: calc(1.5rem + 1rem + 2px);
+    padding: .5rem calc(1rem + .5rem);
+    font-size: $input-font-size * 1.25;
+}
+
+.input-lg,
+.select-lg {
+    height: calc(1.8rem + 1.25rem + 2px);
+    padding: .625rem calc(1.25rem + .5rem);
+    font-size: $input-font-size * 1.5;
+}
+
+.input-wrapper {
+    display: inline-flex;
+    border: 1px solid $input-border-color;
+    border-radius: $input-border-radius;
+
+    .input-icon {
+        opacity: 0.5;
+        padding: .375rem .75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input {
+        border: 0px solid transparent !important;
+
+        &:focus {
+            box-shadow: none;
+
+            &~.input-icon {
+                opacity: 1 !important;
+            }
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+/**
+shorthand class: 
+    .textarea
+    .textarea.disabled
+    .textarea.full|half
+    .textarea-xs|md|lg
+*/
+.textarea,
+.textarea-xs,
+.textarea-md,
+.textarea-lg {
+    @include input($input-font-color, $input-border-color, $input-border-radius);
+    padding: .75rem;
+    width: 100%;
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: rgba($input-border-color, 0.2);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.125em rgba($input-border-color, 0.5);
+    }
+
+    &:hover {
+        border-color: darken($input-border-color, 30%);
+    }
+
+    &::placeholder {
+        color: $input-ph-color;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.half {
+        width: 50%;
+    }
+}
+
+.textarea {
+    font-size: $input-font-size;
+}
+
+.textarea-xs {
+    font-size: $input-font-size * 0.8;
+}
+
+.textarea-md {
+    font-size: $input-font-size * 1.25;
+}
+
+.textarea-lg {
+    font-size: $input-font-size * 1.5;
+}
+
+/**
+select
+*/
+.select,
+.select-xs,
+.select-md,
+.select-lg {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-size: .6em;
+    background-position: calc(100% - .6em) center;
+    background-repeat: no-repeat;
+
+    &[multiple],
+    &[size]:not([size="1"]) {
+        height: auto;
+        background-image: none;
+        padding: 0px;
+
+        option {
+            padding: .375rem calc(.75rem + .5rem);
+        }
+    }
+}
+.select-dark{
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
