@@ -1,5 +1,5 @@
 /*
-border, border-radius, border-width, border-color
+border, border-radius, border-width, border-color, border-style
 */
 
 // Default and preset style for border
@@ -92,5 +92,34 @@ $alpha-value in $alpha-options {
 $side-value in $sides {
   .border-#{$side-key} {
     border-#{$side-value}: 1px solid $default-border-color;
+  }
+}
+
+$border-styles: (none,
+dotted,
+dashed,
+solid,
+double
+) !default;
+/**
+  border style
+  shorthand: .{screen}-border-{style}
+*/
+
+@each $style-name in $border-styles {
+  .border-#{$style-name}, 
+  .hover-border-#{$style-name}:hover,
+  .focus-border-#{$style-name}:focus {
+    border-style: $style-name !important;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    @each $style-name in $border-styles {
+      .#{$breakpoint}-border-#{$style-name} {
+        border-style: $style-name !important;
+      }
+    }
   }
 }
