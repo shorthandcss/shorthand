@@ -28,24 +28,46 @@ $value in $border-radius {
 
 /**
 border-width
-shorthand: .bw-{t|r|b|l}-{width}
+shorthand: .bw-{t|r|b|l}-{width}, .{screen|hover|focus}-bw-{t|r|b|l}-{width}
 */
 
 @each $size,
 $value in $border-width {
 
-  .bw-#{$size} {
+  .bw-#{$size},
+  .hover-bw-#{$size}:hover,
+  .focus-bw-#{$size}:focus  {
     border-width: $value !important;
   }
 
   @each $side-name,
   $side in $sides {
-    .bw-#{$side-name}-#{$size} {
+    .bw-#{$side-name}-#{$size},
+    .hover-bw-#{$side-name}-#{$size}:hover,
+    .focus-bw-#{$side-name}-#{$size}:focus {
       border-#{$side}-width: $value !important;
     }
   }
 }
 
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint-up($breakpoint) {
+    @each $size,
+    $value in $border-width {
+    
+      .#{$breakpoint}-bw-#{$size} {
+        border-width: $value !important;
+      }
+    
+      @each $side-name,
+      $side in $sides {
+        .#{$breakpoint}-bw-#{$side-name}-#{$size} {
+          border-#{$side}-width: $value !important;
+        }
+      }
+    }
+  }
+}
 /**
   border-color
   shorthand: .bc-{color}, .border-{color}
