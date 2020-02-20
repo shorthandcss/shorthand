@@ -4,6 +4,10 @@
   "homepage": "https://shorthandcss.com",
   "description": "Feature rich CSS framework for the new decade",
   "main": "scss/shorthand.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shorthandcss/shorthand.git"
+  },
   "scripts": {
     "build-autoprefix": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"cover 99.5%\" -r dist/*.css",
     "build-dist-lite": "node-sass --output-style expanded --source-map true scss/lite.scss dist/lite.shorthand.css && node-sass --source-map true --output-style compressed scss/lite.scss dist/lite.shorthand.min.css",
