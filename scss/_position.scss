@@ -134,6 +134,22 @@ $overflow-options: (auto,
     }
 }
 
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        @each $overflow-option in $overflow-options {
+            .#{$breakpoint}-overflow-#{$overflow-option} {
+                overflow: $overflow-option !important;
+            }
+            .#{$breakpoint}-overflow-x-#{$overflow-option} {
+                overflow-x: $overflow-option !important;
+            }
+            .#{$breakpoint}-overflow-y-#{$overflow-option} {
+                overflow-y: $overflow-option !important;
+            }
+        }
+    }
+}
+
 /**
 absolute
 */
