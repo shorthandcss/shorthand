@@ -245,6 +245,13 @@ $cursor: (auto:auto,
 
 $z-index: (-1, 0, 10, 20, 30, 40, 50, 100, 1000, 2000, 5000, 10000, auto) !default;
 
+$text-stroke-width: (0: 0px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+) !default;
+
 $default-font-family : $font-sans !default;
 $default-font-size : 16px !default;
 $body-color: map-get($all-colors, 'gray-light') !default;

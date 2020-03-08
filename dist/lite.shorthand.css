@@ -4734,6 +4734,8 @@ Typography:
   text-transform
   font-style
   word-spacing
+  text-stroke-width
+  text-stroke-color
 */
 /**
 text color, font color
@@ -5663,6 +5665,164 @@ word-wrap
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/**
+text-stroke-width
+shorthand: .text-stroke-{width}
+*/
+.text-stroke-0 {
+  -webkit-text-stroke-width: 0px !important;
+}
+
+.text-stroke-1 {
+  -webkit-text-stroke-width: 1px !important;
+}
+
+.text-stroke-2 {
+  -webkit-text-stroke-width: 2px !important;
+}
+
+.text-stroke-3 {
+  -webkit-text-stroke-width: 3px !important;
+}
+
+.text-stroke-4 {
+  -webkit-text-stroke-width: 4px !important;
+}
+
+.text-stroke-6 {
+  -webkit-text-stroke-width: 6px !important;
+}
+
+.text-stroke-8 {
+  -webkit-text-stroke-width: 8px !important;
+}
+
+.text-stroke-12 {
+  -webkit-text-stroke-width: 12px !important;
+}
+
+.text-stroke-16 {
+  -webkit-text-stroke-width: 16px !important;
+}
+
+/**
+text-stroke-color
+shorthand: .text-stroke-{color}
+*/
+.text-stroke-black,
+.hover-text-stroke-black:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000 !important;
+}
+
+.text-stroke-white,
+.hover-text-stroke-white:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFFFFF !important;
+}
+
+.text-stroke-transparent,
+.hover-text-stroke-transparent:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: transparent !important;
+}
+
+.text-stroke-gray-darkest,
+.hover-text-stroke-gray-darkest:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #36454F !important;
+}
+
+.text-stroke-gray-darker,
+.hover-text-stroke-gray-darker:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #465966 !important;
+}
+
+.text-stroke-gray-dark,
+.hover-text-stroke-gray-dark:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #566E7E !important;
+}
+
+.text-stroke-gray,
+.hover-text-stroke-gray:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #668295 !important;
+}
+
+.text-stroke-gray-light,
+.hover-text-stroke-gray-light:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #B7C4CD !important;
+}
+
+.text-stroke-gray-lighter,
+.hover-text-stroke-gray-lighter:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #E4E8EB !important;
+}
+
+.text-stroke-gray-lightest,
+.hover-text-stroke-gray-lightest:hover {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #EEF1F5 !important;
+}
+
+/**
+text-fill-color
+shorthand: .text-fill-{color}
+*/
+.text-fill-black,
+.hover-text-fill-black:hover {
+  -webkit-text-fill-color: #000000;
+}
+
+.text-fill-white,
+.hover-text-fill-white:hover {
+  -webkit-text-fill-color: #FFFFFF;
+}
+
+.text-fill-transparent,
+.hover-text-fill-transparent:hover {
+  -webkit-text-fill-color: transparent;
+}
+
+.text-fill-gray-darkest,
+.hover-text-fill-gray-darkest:hover {
+  -webkit-text-fill-color: #36454F;
+}
+
+.text-fill-gray-darker,
+.hover-text-fill-gray-darker:hover {
+  -webkit-text-fill-color: #465966;
+}
+
+.text-fill-gray-dark,
+.hover-text-fill-gray-dark:hover {
+  -webkit-text-fill-color: #566E7E;
+}
+
+.text-fill-gray,
+.hover-text-fill-gray:hover {
+  -webkit-text-fill-color: #668295;
+}
+
+.text-fill-gray-light,
+.hover-text-fill-gray-light:hover {
+  -webkit-text-fill-color: #B7C4CD;
+}
+
+.text-fill-gray-lighter,
+.hover-text-fill-gray-lighter:hover {
+  -webkit-text-fill-color: #E4E8EB;
+}
+
+.text-fill-gray-lightest,
+.hover-text-fill-gray-lightest:hover {
+  -webkit-text-fill-color: #EEF1F5;
 }
 
 /**

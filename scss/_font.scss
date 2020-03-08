@@ -10,6 +10,8 @@ Typography:
   text-transform
   font-style
   word-spacing
+  text-stroke-width
+  text-stroke-color
 */
 
 /**
@@ -240,4 +242,46 @@ word-wrap
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/**
+text-stroke-width
+shorthand: .text-stroke-{width}
+*/
+
+@each $size,
+$value in $border-width {
+
+  .text-stroke-#{$size} {
+    -webkit-text-stroke-width: $value !important;
+  }
+}
+
+/**
+text-stroke-color
+shorthand: .text-stroke-{color}
+*/
+
+@each $name,
+$value in $all-colors {
+
+  .text-stroke-#{$name},
+  .hover-text-stroke-#{$name}:hover {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $value !important;
+  }
+}
+
+/**
+text-fill-color
+shorthand: .text-fill-{color}
+*/
+
+@each $name,
+$value in $all-colors {
+
+  .text-fill-#{$name}, 
+  .hover-text-fill-#{$name}:hover{
+    -webkit-text-fill-color: $value;
+  }
 }
