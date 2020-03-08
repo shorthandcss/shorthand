@@ -30,7 +30,7 @@ Several quick start options are available:
 
 Clone the repo from Github and install dependencies through npm.
 
-``` bssh
+``` bash
 git clone https://github.com/shorthandcss/shorthand.git
 cd shorthand
 npm install
