@@ -17231,6 +17231,12 @@ shorthand: .after-{icon}
   font-size: inherit;
 }
 
+.after-checkmark::after,
+.before-checkmark::before {
+  content: "✓";
+  font-size: inherit;
+}
+
 @media (min-width: 576px) {
   .after-plus::after,
   .before-plus::before {
@@ -17315,6 +17321,10 @@ shorthand: .after-{icon}
   .after-menu::after,
   .before-menu::before {
     content: "☰";
+  }
+  .after-checkmark::after,
+  .before-checkmark::before {
+    content: "✓";
   }
 }
 
@@ -17403,6 +17413,10 @@ shorthand: .after-{icon}
   .before-menu::before {
     content: "☰";
   }
+  .after-checkmark::after,
+  .before-checkmark::before {
+    content: "✓";
+  }
 }
 
 @media (min-width: 992px) {
@@ -17490,6 +17504,10 @@ shorthand: .after-{icon}
   .before-menu::before {
     content: "☰";
   }
+  .after-checkmark::after,
+  .before-checkmark::before {
+    content: "✓";
+  }
 }
 
 @media (min-width: 1200px) {
@@ -17576,6 +17594,10 @@ shorthand: .after-{icon}
   .after-menu::after,
   .before-menu::before {
     content: "☰";
+  }
+  .after-checkmark::after,
+  .before-checkmark::before {
+    content: "✓";
   }
 }
 
@@ -18652,6 +18674,161 @@ fieldset:disabled
 .button-lg.loading::after {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+/* Basic styles */
+.checkbox,
+.radio,
+.checkbox-bullet,
+.checkbox-round {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.checkbox + label,
+.radio + label,
+.checkbox-bullet + label,
+.checkbox-round + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  height: 1.4em;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.checkbox + label::before,
+.checkbox + label::after,
+.radio + label::before,
+.radio + label::after,
+.checkbox-bullet + label::before,
+.checkbox-bullet + label::after,
+.checkbox-round + label::before,
+.checkbox-round + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.checkbox + label::before,
+.radio + label::before,
+.checkbox-bullet + label::before,
+.checkbox-round + label::before {
+  content: " ";
+  border: 2px solid currentColor;
+}
+
+.checkbox + label:hover::before,
+.radio + label:hover::before,
+.checkbox-bullet + label:hover::before,
+.checkbox-round + label:hover::before {
+  opacity: 0.8;
+}
+
+.checkbox:disabled, .checkbox.disabled,
+.checkbox:disabled + label::before,
+.checkbox:disabled + label,
+.checkbox.disabled + label::before,
+.checkbox.disabled + label,
+.radio:disabled,
+.radio.disabled,
+.radio:disabled + label::before,
+.radio:disabled + label,
+.radio.disabled + label::before,
+.radio.disabled + label,
+.checkbox-bullet:disabled,
+.checkbox-bullet.disabled,
+.checkbox-bullet:disabled + label::before,
+.checkbox-bullet:disabled + label,
+.checkbox-bullet.disabled + label::before,
+.checkbox-bullet.disabled + label,
+.checkbox-round:disabled,
+.checkbox-round.disabled,
+.checkbox-round:disabled + label::before,
+.checkbox-round:disabled + label,
+.checkbox-round.disabled + label::before,
+.checkbox-round.disabled + label {
+  cursor: not-allowed !important;
+  opacity: 0.4 !important;
+}
+
+.checkbox + label::after,
+.radio + label::after,
+.checkbox-bullet + label::after,
+.checkbox-round + label::after {
+  transform: scale(0);
+}
+
+.checkbox:checked + label::after,
+.radio:checked + label::after,
+.checkbox-bullet:checked + label::after,
+.checkbox-round:checked + label::after {
+  transform: scale(1);
+}
+
+.checkbox + label::before,
+.checkbox + label::after,
+.radio + label::before,
+.radio + label::after,
+.checkbox-bullet + label::before,
+.checkbox-bullet + label::after,
+.checkbox-round + label::before,
+.checkbox-round + label::after {
+  transition: 200ms all ease;
+}
+
+.checkbox + label::after, .checkbox-round + label::after {
+  content: '\2714';
+  color: white !important;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.checkbox + label::before, .checkbox-round + label::before {
+  border-radius: 20%;
+}
+
+.checkbox:checked + label::before, .checkbox-round:checked + label::before {
+  background: currentColor;
+  border-color: currentColor;
+}
+
+.checkbox-round + label::before {
+  border-radius: 50%;
+}
+
+.checkbox-bullet + label::before {
+  border-radius: 20%;
+}
+
+.checkbox-bullet + label::after {
+  content: " ";
+  top: .2em;
+  left: .2em;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  border: .2em solid white !important;
+  border-radius: 20%;
+}
+
+.radio + label::before {
+  border-radius: 50%;
+}
+
+.radio + label::after {
+  content: " ";
+  top: .2em;
+  left: .2em;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  border: .2em solid white !important;
+  border-radius: 50%;
 }
 
 .table-container {
