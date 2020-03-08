@@ -6601,6 +6601,52 @@ absolute
 }
 
 /**
+fixed position
+*/
+.fixed-full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/**
 Shadow
 */
 .shadow-0, .hover-shadow-0:hover {
@@ -17813,6 +17859,44 @@ shorthand: .after-{icon}
   .after-right:after,
   .before-right::before {
     float: right;
+  }
+}
+
+.in-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.in-progress::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  width: 400%;
+  margin-left: -200%;
+  -webkit-animation: progress-animation 800ms linear infinite;
+          animation: progress-animation 800ms linear infinite;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%;
+}
+
+@-webkit-keyframes progress-animation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    transform: translate3d(30%, 0, 0);
+  }
+}
+
+@keyframes progress-animation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    transform: translate3d(30%, 0, 0);
   }
 }
 
