@@ -8,7 +8,7 @@ Shorthand is a CSS framework and does not include any javascript. You can custom
 - Design almost anything without writing a css code.
 - Ready to use default styles for some frequently used elements like form, table and spinner.
 - Two style files available monochrome and multicolor.
-- Lite distribution style in with gray colors only,  available under `20KB`.
+- Lite distribution style in with gray colors only,  available under `25KB`.
 - Two gray color sets available gray and slategray.
 - Make interactive UI using transitions and transformations.
 - 36 Google fonts are already included.
@@ -16,6 +16,7 @@ Shorthand is a CSS framework and does not include any javascript. You can custom
 - More color options than any other popular framework.
 - Gradient text, background and border color. 250+ Gradient color options.
 - Responsive height. Maintain aspect ratio of block `1:1`, `1:2`, `4:3` and more.
+- Make content placeholder with `in-progress` class.
 
 ## Quick start
 
