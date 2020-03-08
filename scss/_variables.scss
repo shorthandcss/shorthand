@@ -272,5 +272,7 @@ $button-focus-color: map-get($all-colors, 'gray') !default;
 $button-font-color: map-get($all-colors, 'white') !default;
 $button-font-size: 0.8rem !default;
 $button-border-radius: 4px !default;
+// checkbox/radio default values
+$default-checkbox-color: map-get($all-colors, 'gray-dark') !default;
 // link style default values
 $default-link-color: map-get($all-colors, 'gray-darker') !default;
