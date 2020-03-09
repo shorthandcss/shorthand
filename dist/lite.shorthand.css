@@ -732,16 +732,69 @@ background position
 /**
   background size
   */
-.bg-auto {
+.bg-auto,
+.hover-bg-auto:hover {
   background-size: auto !important;
 }
 
-.bg-cover {
+.bg-cover,
+.hover-bg-cover:hover {
   background-size: cover !important;
 }
 
-.bg-contain {
+.bg-contain,
+.hover-bg-contain:hover {
   background-size: contain !important;
+}
+
+.bg-0-0,
+.hover-bg-0-0:hover {
+  background-size: 0% 0% !important;
+}
+
+.bg-0-100,
+.hover-bg-0-100:hover {
+  background-size: 0% 100% !important;
+}
+
+.bg-100-0,
+.hover-bg-100-0:hover {
+  background-size: 100% 0% !important;
+}
+
+.bg-10-100,
+.hover-bg-10-100:hover {
+  background-size: 10% 100% !important;
+}
+
+.bg-100-10,
+.hover-bg-100-10:hover {
+  background-size: 100% 10% !important;
+}
+
+.bg-25-100,
+.hover-bg-25-100:hover {
+  background-size: 25% 100% !important;
+}
+
+.bg-100-25,
+.hover-bg-100-25:hover {
+  background-size: 100% 25% !important;
+}
+
+.bg-50-100,
+.hover-bg-50-100:hover {
+  background-size: 50% 100% !important;
+}
+
+.bg-100-50,
+.hover-bg-100-50:hover {
+  background-size: 100% 50% !important;
+}
+
+.bg-100-100,
+.hover-bg-100-100:hover {
+  background-size: 100% 100% !important;
 }
 
 @media (min-width: 576px) {
@@ -753,6 +806,36 @@ background position
   }
   .sm-bg-contain {
     background-size: contain !important;
+  }
+  .sm-bg-0-0 {
+    background-size: 0% 0% !important;
+  }
+  .sm-bg-0-100 {
+    background-size: 0% 100% !important;
+  }
+  .sm-bg-100-0 {
+    background-size: 100% 0% !important;
+  }
+  .sm-bg-10-100 {
+    background-size: 10% 100% !important;
+  }
+  .sm-bg-100-10 {
+    background-size: 100% 10% !important;
+  }
+  .sm-bg-25-100 {
+    background-size: 25% 100% !important;
+  }
+  .sm-bg-100-25 {
+    background-size: 100% 25% !important;
+  }
+  .sm-bg-50-100 {
+    background-size: 50% 100% !important;
+  }
+  .sm-bg-100-50 {
+    background-size: 100% 50% !important;
+  }
+  .sm-bg-100-100 {
+    background-size: 100% 100% !important;
   }
 }
 
@@ -766,6 +849,36 @@ background position
   .md-bg-contain {
     background-size: contain !important;
   }
+  .md-bg-0-0 {
+    background-size: 0% 0% !important;
+  }
+  .md-bg-0-100 {
+    background-size: 0% 100% !important;
+  }
+  .md-bg-100-0 {
+    background-size: 100% 0% !important;
+  }
+  .md-bg-10-100 {
+    background-size: 10% 100% !important;
+  }
+  .md-bg-100-10 {
+    background-size: 100% 10% !important;
+  }
+  .md-bg-25-100 {
+    background-size: 25% 100% !important;
+  }
+  .md-bg-100-25 {
+    background-size: 100% 25% !important;
+  }
+  .md-bg-50-100 {
+    background-size: 50% 100% !important;
+  }
+  .md-bg-100-50 {
+    background-size: 100% 50% !important;
+  }
+  .md-bg-100-100 {
+    background-size: 100% 100% !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -778,6 +891,36 @@ background position
   .lg-bg-contain {
     background-size: contain !important;
   }
+  .lg-bg-0-0 {
+    background-size: 0% 0% !important;
+  }
+  .lg-bg-0-100 {
+    background-size: 0% 100% !important;
+  }
+  .lg-bg-100-0 {
+    background-size: 100% 0% !important;
+  }
+  .lg-bg-10-100 {
+    background-size: 10% 100% !important;
+  }
+  .lg-bg-100-10 {
+    background-size: 100% 10% !important;
+  }
+  .lg-bg-25-100 {
+    background-size: 25% 100% !important;
+  }
+  .lg-bg-100-25 {
+    background-size: 100% 25% !important;
+  }
+  .lg-bg-50-100 {
+    background-size: 50% 100% !important;
+  }
+  .lg-bg-100-50 {
+    background-size: 100% 50% !important;
+  }
+  .lg-bg-100-100 {
+    background-size: 100% 100% !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -789,6 +932,36 @@ background position
   }
   .xl-bg-contain {
     background-size: contain !important;
+  }
+  .xl-bg-0-0 {
+    background-size: 0% 0% !important;
+  }
+  .xl-bg-0-100 {
+    background-size: 0% 100% !important;
+  }
+  .xl-bg-100-0 {
+    background-size: 100% 0% !important;
+  }
+  .xl-bg-10-100 {
+    background-size: 10% 100% !important;
+  }
+  .xl-bg-100-10 {
+    background-size: 100% 10% !important;
+  }
+  .xl-bg-25-100 {
+    background-size: 25% 100% !important;
+  }
+  .xl-bg-100-25 {
+    background-size: 100% 25% !important;
+  }
+  .xl-bg-50-100 {
+    background-size: 50% 100% !important;
+  }
+  .xl-bg-100-50 {
+    background-size: 100% 50% !important;
+  }
+  .xl-bg-100-100 {
+    background-size: 100% 100% !important;
   }
 }
 
