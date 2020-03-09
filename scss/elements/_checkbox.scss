@@ -35,9 +35,6 @@
         opacity: 0.8;
     }
 
-
-    &:disabled,
-    &.disabled,
     &:disabled+label::before,
     &:disabled+label,
     &.disabled+label::before,
