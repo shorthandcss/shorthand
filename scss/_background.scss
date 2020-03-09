@@ -96,19 +96,33 @@ $repeat-options: (repeat, no-repeat, repeat-x, repeat-y);
 /**
   background size
   */
-$background-size-options: (auto, cover, contain);
+  $background-size-options: (auto:auto, 
+  cover:cover, 
+  contain:contain,
+  '0-0':0% 0%,
+  '0-100':0% 100%,
+  '100-0':100% 0%,
+  '10-100':10% 100%,
+  '100-10':100% 10%,
+  '25-100':25% 100%,
+  '100-25':100% 25%,
+  '50-100':50% 100%,
+  '100-50':100% 50%,
+  '100-100':100% 100%
+  );
 
-@each $name in $background-size-options {
-  .bg-#{$name} {
-    background-size: $name !important;
+@each $name, $value in $background-size-options {
+  .bg-#{$name},
+  .hover-bg-#{$name}:hover {
+    background-size: $value !important;
   }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
   @include breakpoint-up($breakpoint) {
-    @each $name in $background-size-options {
+    @each $name, $value in $background-size-options {
       .#{$breakpoint}-bg-#{$name} {
-        background-size: $name !important;
+        background-size: $value !important;
       }
     }
   }
