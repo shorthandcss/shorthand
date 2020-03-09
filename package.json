@@ -4,6 +4,7 @@
   "homepage": "https://shorthandcss.com",
   "description": "Feature rich CSS framework for the new decade",
   "main": "scss/shorthand.scss",
+  "unpkg": "dist/shorthand.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/shorthandcss/shorthand.git"
