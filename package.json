@@ -1,6 +1,6 @@
 {
   "name": "shorthandcss",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://shorthandcss.com",
   "description": "Feature rich CSS framework for the new decade",
   "main": "scss/shorthand.scss",
