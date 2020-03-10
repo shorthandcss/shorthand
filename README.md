@@ -1,14 +1,22 @@
 # Shorthand
+
 <a align="center" href="https://shorthandcss.com"><img width="100%" src="https://shorthandcss.com/assets/images/banner.jpg"></a>
 
 Shorthand is a CSS framework and does not include any javascript. You can customize the framework by using `.scss` only.
+
+## Size
+
+ Dist | File | URL
+|---|---|---|
+Lite  | lite.shorthand.min.css | ![](https://img.badgesize.io/shorthandcss/shorthand/master/dist/lite.shorthand.min.css.svg?compression=brotli)
+Full | shorthand.min.css | ![](https://img.badgesize.io/shorthandcss/shorthand/master/dist/shorthand.min.css.svg?compression=brotli)
 
 ## Features
 
 - Design almost anything without writing a css code.
 - Ready to use default styles for some frequently used elements like form, table and spinner.
 - Two style files available monochrome and multicolor.
-- Lite distribution style in with gray colors only,  available under `25KB`.
+- Lite distribution style in with gray colors only,  available under `16KB`.
 - Two gray color sets available gray and slategray.
 - Make interactive UI using transitions and transformations.
 - 36 Google fonts are already included.
