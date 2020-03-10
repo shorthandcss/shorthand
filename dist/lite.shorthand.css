@@ -5611,35 +5611,35 @@ underline-style
 */
 .underline-solid,
 .hover-underline-solid:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   -webkit-text-decoration-style: solid !important;
           text-decoration-style: solid !important;
 }
 
 .underline-double,
 .hover-underline-double:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   -webkit-text-decoration-style: double !important;
           text-decoration-style: double !important;
 }
 
 .underline-dotted,
 .hover-underline-dotted:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   -webkit-text-decoration-style: dotted !important;
           text-decoration-style: dotted !important;
 }
 
 .underline-dashed,
 .hover-underline-dashed:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   -webkit-text-decoration-style: dashed !important;
           text-decoration-style: dashed !important;
 }
 
 .underline-wavy,
 .hover-underline-wavy:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   -webkit-text-decoration-style: wavy !important;
           text-decoration-style: wavy !important;
 }
@@ -5649,62 +5649,62 @@ underline-color
 */
 .underline-black {
   text-decoration: underline;
-  -webkit-text-decoration-color: #000000;
-          text-decoration-color: #000000;
+  -webkit-text-decoration-color: #000000 !important;
+          text-decoration-color: #000000 !important;
 }
 
 .underline-white {
   text-decoration: underline;
-  -webkit-text-decoration-color: #FFFFFF;
-          text-decoration-color: #FFFFFF;
+  -webkit-text-decoration-color: #FFFFFF !important;
+          text-decoration-color: #FFFFFF !important;
 }
 
 .underline-transparent {
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent !important;
+          text-decoration-color: transparent !important;
 }
 
 .underline-gray-darkest {
   text-decoration: underline;
-  -webkit-text-decoration-color: #36454F;
-          text-decoration-color: #36454F;
+  -webkit-text-decoration-color: #36454F !important;
+          text-decoration-color: #36454F !important;
 }
 
 .underline-gray-darker {
   text-decoration: underline;
-  -webkit-text-decoration-color: #465966;
-          text-decoration-color: #465966;
+  -webkit-text-decoration-color: #465966 !important;
+          text-decoration-color: #465966 !important;
 }
 
 .underline-gray-dark {
   text-decoration: underline;
-  -webkit-text-decoration-color: #566E7E;
-          text-decoration-color: #566E7E;
+  -webkit-text-decoration-color: #566E7E !important;
+          text-decoration-color: #566E7E !important;
 }
 
 .underline-gray {
   text-decoration: underline;
-  -webkit-text-decoration-color: #668295;
-          text-decoration-color: #668295;
+  -webkit-text-decoration-color: #668295 !important;
+          text-decoration-color: #668295 !important;
 }
 
 .underline-gray-light {
   text-decoration: underline;
-  -webkit-text-decoration-color: #B7C4CD;
-          text-decoration-color: #B7C4CD;
+  -webkit-text-decoration-color: #B7C4CD !important;
+          text-decoration-color: #B7C4CD !important;
 }
 
 .underline-gray-lighter {
   text-decoration: underline;
-  -webkit-text-decoration-color: #E4E8EB;
-          text-decoration-color: #E4E8EB;
+  -webkit-text-decoration-color: #E4E8EB !important;
+          text-decoration-color: #E4E8EB !important;
 }
 
 .underline-gray-lightest {
   text-decoration: underline;
-  -webkit-text-decoration-color: #EEF1F5;
-          text-decoration-color: #EEF1F5;
+  -webkit-text-decoration-color: #EEF1F5 !important;
+          text-decoration-color: #EEF1F5 !important;
 }
 
 /**

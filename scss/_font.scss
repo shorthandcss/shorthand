@@ -141,7 +141,7 @@ $underline-style-options: (solid, double, dotted, dashed, wavy);
 
   .underline-#{$name},
   .hover-underline-#{$name}:hover {
-    text-decoration: underline !important;
+    text-decoration: underline;
     text-decoration-style: $name !important;
   }
 }
@@ -153,7 +153,7 @@ underline-color
 $value in $all-colors {
   .underline-#{$name} {
     text-decoration: underline;
-    text-decoration-color: $value;
+    text-decoration-color: $value !important;
   }
 }
 /**
