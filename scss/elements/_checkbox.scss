@@ -24,6 +24,7 @@
     display: block;
     width: 1.4em;
     height: 1.4em;
+    transition: 200ms all ease;
   }
 
   + label::before {
@@ -49,11 +50,6 @@
 
   &:checked + label::after {
     transform: scale(1);
-  }
-
-  + label::before,
-  + label::after {
-    transition: 200ms all ease;
   }
 }
 
