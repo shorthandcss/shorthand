@@ -7,7 +7,7 @@
     opacity: 0;
     z-index: -1;
 
-    &+label {
+    + label {
         position: relative;
         display: inline-block;
         padding: 0 0 0 2em;
@@ -16,8 +16,8 @@
         cursor: pointer;
     }
 
-    &+label::before,
-    &+label::after {
+    + label::before,
+    + label::after {
         position: absolute;
         top: 0;
         left: 0;
@@ -26,12 +26,12 @@
         height: 1.4em;
     }
 
-    &+label::before {
+    + label::before {
         content: " ";
         border: 2px solid currentColor;
     }
-    
-    &+label:hover::before {
+
+    + label:hover::before {
         opacity: 0.8;
     }
 
@@ -43,7 +43,7 @@
         opacity: 0.4 !important;
     }
 
-    &+label::after {
+    + label::after {
         transform: scale(0);
     }
 
@@ -51,21 +51,21 @@
         transform: scale(1);
     }
 
-    &+label::before,
-    &+label::after {
+    + label::before,
+    + label::after {
         transition: 200ms all ease;
     }
 }
 
 .checkbox, .checkbox-round {
-    &+label::after {
+    + label::after {
         content: '\2714';
         color: white !important;
         line-height: 1.5;
         text-align: center;
     }
 
-    &+label::before {
+    + label::before {
         border-radius: 20%;
     }
 
@@ -75,39 +75,39 @@
     }
 }
 .checkbox-round{
-    &+label::before {
+    + label::before {
         border-radius: 50%;
     }
 }
 .checkbox-bullet{
-    &+label::before {
+    + label::before {
         border-radius: 20%;
     }
-    &+label::after {
+    + label::after {
         content: " ";
-        top: .2em;
-        left: .2em;
+        top: 0.2em;
+        left: 0.2em;
         width: 1em;
         height: 1em;
         background: currentColor;
-        border: .2em solid white !important;
+        border: 0.2em solid white !important;
         border-radius: 20%;
     }
 }
 .radio {
 
-    &+label::before {
+    + label::before {
         border-radius: 50%;
     }
 
-    &+label::after {
+    + label::after {
         content: " ";
-        top: .2em;
-        left: .2em;
+        top: 0.2em;
+        left: 0.2em;
         width: 1em;
         height: 1em;
         background: currentColor;
-        border: .2em solid white !important;
+        border: 0.2em solid white !important;
         border-radius: 50%;
     }
 }

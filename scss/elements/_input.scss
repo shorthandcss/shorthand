@@ -57,29 +57,29 @@ shorthand class:
 
 .input,
 .select {
-    height: calc(1.5rem + .75rem + 2px);
-    padding: .375rem calc(.75rem + .5rem);
+    height: calc(1.5rem + 0.75rem + 2px);
+    padding: 0.375rem calc(0.75rem + 0.5rem);
     font-size: $input-font-size;
 }
 
 .input-xs,
 .select-xs {
-    height: calc(1.5rem + .4rem + 2px);
-    padding: .2rem calc(.5rem + .5rem);
+    height: calc(1.5rem + 0.4rem + 2px);
+    padding: 0.2rem calc(0.5rem + 0.5rem);
     font-size: $input-font-size * 0.8;
 }
 
 .input-md,
 .select-md {
     height: calc(1.5rem + 1rem + 2px);
-    padding: .5rem calc(1rem + .5rem);
+    padding: 0.5rem calc(1rem + 0.5rem);
     font-size: $input-font-size * 1.25;
 }
 
 .input-lg,
 .select-lg {
     height: calc(1.8rem + 1.25rem + 2px);
-    padding: .625rem calc(1.25rem + .5rem);
+    padding: 0.625rem calc(1.25rem + 0.5rem);
     font-size: $input-font-size * 1.5;
 }
 
@@ -90,14 +90,14 @@ shorthand class:
 
     .input-icon {
         opacity: 0.5;
-        padding: .375rem .75rem;
+        padding: 0.375rem 0.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .input {
-        border: 0px solid transparent !important;
+        border: 0 solid transparent !important;
 
         &:focus {
             box-shadow: none;
@@ -114,7 +114,7 @@ shorthand class:
 }
 
 /**
-shorthand class: 
+shorthand class:
     .textarea
     .textarea.disabled
     .textarea.full|half
@@ -125,7 +125,7 @@ shorthand class:
 .textarea-md,
 .textarea-lg {
     @include input($input-font-color, $input-border-color, $input-border-radius);
-    padding: .75rem;
+    padding: 0.75rem;
     width: 100%;
 
     &:disabled,
@@ -187,18 +187,18 @@ select
     position: relative;
     cursor: pointer;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    background-size: .6em;
-    background-position: calc(100% - .6em) center;
+    background-size: 0.6em;
+    background-position: calc(100% - 0.6em) center;
     background-repeat: no-repeat;
 
     &[multiple],
     &[size]:not([size="1"]) {
         height: auto;
         background-image: none;
-        padding: 0px;
+        padding: 0;
 
         option {
-            padding: .375rem calc(.75rem + .5rem);
+            padding: 0.375rem calc(0.75rem + 0.5rem);
         }
     }
 }

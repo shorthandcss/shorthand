@@ -54,11 +54,11 @@ $value in $border-width {
   @include breakpoint-up($breakpoint) {
     @each $size,
     $value in $border-width {
-    
+
       .#{$breakpoint}-bw-#{$size} {
         border-width: $value !important;
       }
-    
+
       @each $side-name,
       $side in $sides {
         .#{$breakpoint}-bw-#{$side-name}-#{$size} {
@@ -123,13 +123,14 @@ dashed,
 solid,
 double
 ) !default;
+
 /**
   border style
   shorthand: .{screen}-border-{style}
 */
 
 @each $style-name in $border-styles {
-  .border-#{$style-name}, 
+  .border-#{$style-name},
   .hover-border-#{$style-name}:hover,
   .focus-border-#{$style-name}:focus {
     border-style: $style-name !important;

@@ -3,12 +3,11 @@ Sizing:
     width
     min-width
     max-width
-    
+
     height
     min-height
     max-height
 */
-
 
 /**
 ===========width===========
@@ -110,6 +109,7 @@ $value in $responsive-height {
         padding-bottom: $value;
     }
 }
+
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
         @each $name,

@@ -54,7 +54,6 @@ $justify-content-options : (start:flex-start,
     between:space-between,
     around:space-around);
 
-
 @each $key,
 $value in $justify-content-options {
     .justify-#{$key} {
@@ -201,7 +200,8 @@ $value in $order-options {
 /**
 fill, equal, grow, and shrink
 */
-.flex-fill, .flex-auto {
+.flex-fill,
+.flex-auto {
     flex: 1 1 auto !important;
 }
 

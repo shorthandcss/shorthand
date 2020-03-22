@@ -3,7 +3,7 @@ position
 */
 $positions: (
     absolute,
-    fixed,    
+    fixed,
     relative,
     static,
     sticky);
@@ -13,6 +13,7 @@ $positions: (
         position: $position !important;
     }
 }
+
 @each $breakpoint in map-keys($breakpoints){
     @include breakpoint-up($breakpoint) {
         @each $position in $positions {
@@ -22,6 +23,7 @@ $positions: (
         }
     }
 }
+
 /**
 Locations: top, right, bottom, left
 */
@@ -29,7 +31,6 @@ $locations: (0: 0,
         50pc: 50%,
         100pc: 100%,
         auto: auto);
-
 
 /**
 .top-0 { top: 0 }
