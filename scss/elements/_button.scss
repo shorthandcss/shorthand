@@ -86,7 +86,7 @@
 .button-xs {
   height: calc(1.5rem + .4rem + 2px);
   padding: .2rem calc(.5rem + 1rem);
-  font-size: $button-font-size * 0.8;
+  font-size: $button-font-size * .8;
 
   &.loading::after {
     width: 1.2rem * 0.8;
