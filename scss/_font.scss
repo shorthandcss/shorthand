@@ -1,10 +1,10 @@
-/* 
+/*
 Typography:
   color
   font-family
-  font-size 
+  font-size
   font-weight
-  line-height 
+  line-height
   letter-spacing
   text-align
   text-transform
@@ -156,6 +156,7 @@ $value in $all-colors {
     text-decoration-color: $value !important;
   }
 }
+
 /**
   Text Transform
   */
@@ -231,7 +232,6 @@ word-wrap
   word-wrap: normal;
 }
 
-
 .text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -280,7 +280,7 @@ shorthand: .text-fill-{color}
 @each $name,
 $value in $all-colors {
 
-  .text-fill-#{$name}, 
+  .text-fill-#{$name},
   .hover-text-fill-#{$name}:hover{
     -webkit-text-fill-color: $value;
   }

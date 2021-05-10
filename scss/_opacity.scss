@@ -7,7 +7,7 @@
   visibility: hidden !important;
 }
 
-// opacity  
+// opacity
 @each $name,
 $value in $opacity {
   .opacity-#{$name} {

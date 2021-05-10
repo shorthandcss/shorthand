@@ -7,6 +7,7 @@ scale
         transform: scale($value);
     }
 }
+
 @each $breakpoint in map-keys($breakpoints){
     @include breakpoint-up($breakpoint) {
         @each $size, $value in $scale-options {
@@ -20,28 +21,39 @@ scale
 /**
 Translate, Shift center
 */
-.shift-tr, .shift-rt{
+.shift-tr,
+.shift-rt {
     transform: translateY(-50%) translateX(50%);
 }
-.shift-tl, .shift-lt{
+
+.shift-tl,
+.shift-lt {
     transform: translateY(-50%) translateX(-50%);
 }
-.shift-bl, .shift-lb{
+
+.shift-bl,
+.shift-lb {
     transform: translateY(50%) translateX(-50%);
 }
-.shift-br, .shift-rb{
+
+.shift-br,
+.shift-rb {
     transform: translateY(50%) translateX(50%);
 }
-.shift-l{
+
+.shift-l {
     transform: translateX(-50%);
 }
-.shift-r{
+
+.shift-r {
     transform: translateX(50%);
 }
-.shift-t{
+
+.shift-t {
     transform: translateY(-50%);
 }
-.shift-b{
+
+.shift-b {
     transform: translateY(50%);
 }
 
