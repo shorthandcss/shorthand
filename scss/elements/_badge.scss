@@ -1,0 +1,116 @@
+// badge
+
+.badge,
+.badge-xs,
+.badge-md,
+.badge-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  color: $badge-font-color;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: $badge-background-color;
+  border: 1px solid $badge-border-color;
+  border-radius: $badge-border-radius;
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    cursor: not-allowed !important;
+    opacity: 0.3 !important;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.15em rgba($badge-focus-color, 0.5);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &[class*=' hover']:hover {
+    opacity: 1;
+  }
+
+  .input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.loading {
+    pointer-events: none;
+    cursor: wait !important;
+    opacity: 0.8;
+  }
+
+  &.loading::after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-bottom;
+    border-width: .1rem;
+    border-style: solid;
+    border-color: currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: -1rem;
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.half {
+    width: 50%;
+  }
+}
+
+.badge {
+  height: calc(1.5rem + .75rem + 2px);
+  padding: .375rem calc(.75rem + 1rem);
+  font-size: $badge-font-size;
+
+  &.loading::after {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+.badge-xs {
+  height: calc(1.5rem + .4rem + 2px);
+  padding: .2rem calc(.5rem + 1rem);
+  font-size: $badge-font-size * 0.8;
+
+  &.loading::after {
+    width: 1.2rem * 0.5;
+    height: 1.2rem * 0.5;
+  }
+}
+
+.badge-md {
+  height: calc(1.5rem + 1rem + 2px);
+  padding: .5rem calc(1rem + 1.2rem);
+  font-size: $badge-font-size * 1.25;
+
+  &.loading::after {
+    width: 1.2rem * 0.8;
+    height: 1.2rem * 0.8;
+  }
+}
+
+.badge-lg {
+  height: calc(1.8rem + 1.25rem + 2px);
+  padding: .625rem calc(1.25rem + 1.5rem);
+  font-size: $badge-font-size * 1.5;
+
+  &.loading::after {
+    width: 1.2rem * 1;
+    height: 1.2rem * 1;
+  }
+}

@@ -283,3 +283,17 @@ $button-border-radius: 4px !default;
 $default-checkbox-color: map-get($all-colors, 'gray-dark') !default;
 // link style default values
 $default-link-color: map-get($all-colors, 'gray-darker') !default;
+//banner
+$banner-background-color: map-get($all-colors, 'gray-dark') !default;
+$banner-border-color: map-get($all-colors, 'transparent') !default;
+$banner-focus-color: map-get($all-colors, 'gray') !default;
+$banner-font-color: map-get($all-colors, 'white') !default;
+$banner-font-size: 1rem !default;
+$banner-border-radius: 4px !default;
+//badge
+$badge-background-color: map-get($all-colors, 'gray-dark') !default;
+$badge-border-color: map-get($all-colors, 'transparent') !default;
+$badge-focus-color: map-get($all-colors, 'gray') !default;
+$badge-font-color: map-get($all-colors, 'white') !default;
+$badge-font-size: 0.5rem !default;
+$badge-border-radius: 6px !default;
