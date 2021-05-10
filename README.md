@@ -51,7 +51,7 @@ Run the build command to build `dist` files
 
 ## Documentation
 
-Docs can be found at https://shorthandcss.com/docs
+Docs can be found at https://shorthandcss.bansal.io/docs
 
 ## License
 
