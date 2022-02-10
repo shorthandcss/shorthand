@@ -30,7 +30,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "banner-cli": "^0.14.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "onchange": "^6.1.0",
     "postcss-cli": "^6.1.3"
   }
